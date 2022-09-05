@@ -58,7 +58,7 @@
   }
 
   async function copyText() {
-    await navigator.clipboard.writeText(`result`);
+    await navigator.clipboard.writeText(result);
     alert('Copied result to clipboard!');
   }
 </script>
