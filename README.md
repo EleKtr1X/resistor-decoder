@@ -2,13 +2,11 @@
 
 A tiny web app made in Svelte and Vite that decodes your resistors.
 
+<https://elektr1x.github.io/resistor-decoder>
+
 ![demo](demo.gif)
 
 ---
-
-## Live Demo
-
-A live demo of this app is at <https://elektr1x.github.io/resistor-decoder>.
 
 ## Running Locally
 
