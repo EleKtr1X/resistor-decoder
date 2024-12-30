@@ -8,7 +8,7 @@
   export let name;
   let show = false;
   let selected = data[0][1];
-  let selectedColor = data[0][2] || '#ffffff';
+  let selectedColor = data[0][2] || '#EEEEEE';
 
   function toggleVisibility() {
     show = !show;
@@ -17,7 +17,7 @@
   function changeSelected(option) {
     show = false;
     selected = option[1];
-    selectedColor = option[2] || '#ffffff';
+    selectedColor = option[2] || '#EEEEEE';
     dispatch('selectChange', [name, option[0]]);
   }
 </script>
@@ -26,7 +26,7 @@
     {name}
   </div>
   <div class="dropdown" style:color={isDarkColor(selectedColor) ? 'white': 'black'}>
-    <div class="selected" on:click={toggleVisibility} style:background={selectedColor}>
+    <div class="selected" on:click={toggleVisibility} on:keypress={toggleVisibility} tabindex=0 style:background={selectedColor}>
       {selected}
       <div class="arrow">
         <i class="fa-solid fa-angle-{show ? 'up' : 'down'} fa-xs"></i>
@@ -34,11 +34,11 @@
         
     </div>
     {#if show}
-      <div class="options">
+      <ul class="options">
         {#each data as option}
           <DropdownOption on:selectChange={(e) => (changeSelected(e.detail))} {option} />
         {/each}
-      </div>
+      </ul>
     {/if}
   </div>  
 </div>
@@ -51,9 +51,11 @@
     }
     .selected, .options {
       width: 200px;
+      margin-right: 0px;
     }
 
     .options {
+      margin-left: 5px;
       margin-bottom: 10px;
     }
   }
@@ -68,20 +70,23 @@
     padding: 5px 0px 5px 10px;
     max-width: 200px;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .selected, .options {
-    border: 5px solid #000;
+    /* background-color: #000000; */
     border-radius: 10px;
     max-width: 200px;
     margin-right: 10px;
   }
   
   .options {
-    padding: 5px;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    padding-left: 0px;
+    max-height: 200px;
   }
 
   .selected .arrow {
@@ -93,6 +98,7 @@
     font-weight: 700;
     font-size: 20px;
     text-align: center;
+    margin-bottom: 5px;
   }
 
   .container {

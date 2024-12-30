@@ -6,8 +6,8 @@
   export let tempcoeff;
 
   import { createEventDispatcher, onMount } from "svelte";
-  import ColoredNumber from "./ColoredNumber.svelte";
-  import { digitColor, multiplierColor, toleranceColor, tempcoeffColor, numberToShorthand } from '../constants';
+  import { numberToShorthand } from '../constants';
+    import Button from "./Button.svelte";
   
   let resistance = numberToShorthand(parseInt(digits.join('')) * multiplier);
   let resultText = `${resistance} Ω`;
@@ -17,7 +17,7 @@
     resultText += ` ± 20%`
   }
   if (bandCount == 6) {
-    resultText += ` ${tempcoeff}ppm/K`;
+    resultText += ` ${tempcoeff} ppm/K`;
   }
   
   let dispatch = createEventDispatcher();
@@ -25,43 +25,34 @@
     dispatch('resultUpdate', resultText);
   });
 
+  async function copyText() {
+    await navigator.clipboard.writeText(resultText);
+    alert('Copied result to clipboard!');
+  }
 </script>
 
-<h1>
-  {#each digits as digit}
-    <ColoredNumber number={digit} data={digitColor} />
-  {/each}
-  ×
-  <ColoredNumber number={multiplier} data={multiplierColor} />
-  = <b>{resistance} Ω</b>
-  {#if bandCount >= 4}
-    <b>
-      ± 
-      <ColoredNumber number={tolerance} data={toleranceColor} />%
-    </b>
-  {:else}
-    <b>
-      ± 20%
-    </b>
-  {/if}
-
-  {#if bandCount == 6}
-    <b>
-      <ColoredNumber number={tempcoeff} data={tempcoeffColor} />
-      ppm/K
-    </b>
-  {/if}
-</h1>
+<div class="result">
+  <h1>{resultText}</h1>
+  <Button text="Copy Result" icon="fa-solid fa-copy" on:click={copyText} />
+</div>
 
 <style>
   h1 {
     text-align: center;
     font-size: 50px;
     font-weight: 400;
-    border: 5px solid #000;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0px auto 15px auto;
-    max-width: 1000px;
+    font-weight: bold;
+    margin: 0
+  }
+
+  .result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    max-width: 800px;
+    padding: 10px;
+    margin: auto;
   }
 </style>

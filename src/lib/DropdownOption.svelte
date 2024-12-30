@@ -1,25 +1,29 @@
 <script>
   export let option;
   let text = option[1];
-  let color = option[2] || '#FFFFFF';
-  import isDarkColor from 'is-dark-color';
+  let color = option[2] || '#EEEEEE';
+  import { contrastColors } from '../constants';
 
   import { createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
 </script>
 
-<div on:click={() => dispatch('selectChange', option)} style:background={color} style:color={isDarkColor(color) ? 'white' : 'black'} style="{color == '#FFFFFF' ? 'border: 5px solid black; box-sizing: border-box;' : ''}">{text}</div>
+<li
+  on:click={() => dispatch('selectChange', option)}
+  on:keypress={() => dispatch('selectChange', option)}
+  tabindex=0
+  style:background={color}
+  style:color={contrastColors[color] || '#000'}
+>{text}</li>
 
 <style>
-  div {
+  li {
     list-style-type: none;
-    border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
-    margin-bottom: 4px;
   }
 
-  div:hover {
+  li:hover {
     filter: brightness(0.85);
   }
 </style>

@@ -56,11 +56,6 @@
   function updateResult(text) {
     result = text;
   }
-
-  async function copyText() {
-    await navigator.clipboard.writeText(result);
-    alert('Copied result to clipboard!');
-  }
 </script>
 
 <main>
@@ -68,9 +63,6 @@
     <Preview {bandCount} {digits} {multiplier} {tolerance} {tempcoeff} />
     <Result {bandCount} {digits} {multiplier} {tolerance} {tempcoeff} on:resultUpdate={(e) => updateResult(e.detail)} />
   {/key}
-  <div class="buttons">
-    <Button text="<i class='fa-solid fa-copy'></i>" on:click={copyText} />
-  </div>
   {#key resetDropdowns}
     <div class="dropdowns">
       <Dropdown on:selectChange={(e) => handleChange(e.detail)} data={[
@@ -89,7 +81,7 @@
         [6, 'Blue', '#1A94D0'],
         [7, 'Purple', '#7E43B1'],
         [8, 'Grey', '#999999'],
-        [9, 'White', '#FFFFFF'],
+        [9, 'White', '#EEEEEE'],
       ]} name="1st Digit" />
       
       <Dropdown on:selectChange={(e) => handleChange(e.detail)} data={[
@@ -102,7 +94,7 @@
         [6, 'Blue', '#1A94D0'],
         [7, 'Purple', '#7E43B1'],
         [8, 'Grey', '#999999'],
-        [9, 'White', '#FFFFFF'],
+        [9, 'White', '#EEEEEE'],
       ]} name="2nd Digit" />
 
       {#if bandCount >= 5}
@@ -116,7 +108,7 @@
           [6, 'Blue', '#1A94D0'],
           [7, 'Purple', '#7E43B1'],
           [8, 'Grey', '#999999'],
-          [9, 'White', '#FFFFFF'],
+          [9, 'White', '#EEEEEE'],
         ]} name="3rd Digit" />
       {/if}
       
@@ -130,7 +122,7 @@
         [1000000, 'Blue', '#1A94D0'],
         [10000000, 'Purple', '#7E43B1'],
         [100000000, 'Grey', '#999999'],
-        [1000000000, 'White', '#FFFFFF'],
+        [1000000000, 'White', '#EEEEEE'],
         [0.1, 'Gold', '#FFB800'],
         [0.01, 'Silver', '#DCDCDC']
       ]} name="Multiplier" />
@@ -175,10 +167,5 @@
       flex-direction: column;
       justify-content: center;
     }
-  }
-
-  .buttons {
-    max-width: 200px;
-    margin: auto auto 15px auto;
   }
 </style>

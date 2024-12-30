@@ -1,1 +1,47 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 50.82"><defs><style>.cls-1{fill:#e1ccb4;}.cls-2{fill:#b7b9b9;}</style></defs><path class="cls-1" d="M138.813,48.935a12.89754,12.89754,0,0,1-10.96582-6.0957H80.45853A12.90224,12.90224,0,0,1,69.49271,48.935h-13.46a13.08426,13.08426,0,0,1-13-13.13867V15.25234a13.084,13.084,0,0,1,13-13.13769h13.46a12.91257,12.91257,0,0,1,10.2124,5.01514h48.895A12.91568,12.91568,0,0,1,138.813,2.11465h13.46a13.08436,13.08436,0,0,1,13,13.13769v20.544a13.08458,13.08458,0,0,1-13,13.13867Z" transform="translate(-0.15287 -0.11465)"/><path d="M152.27286,4.11465a11.06956,11.06956,0,0,1,11,11.13787V35.79677a11.06957,11.06957,0,0,1-11,11.13788h-13.46a10.977,10.977,0,0,1-9.799-6.095H79.29184a10.977,10.977,0,0,1-9.79895,6.095h-13.46a11.06957,11.06957,0,0,1-11-11.13788V15.25252a11.06956,11.06956,0,0,1,11-11.13787h13.46a10.95166,10.95166,0,0,1,9.18408,5.015h50.95185a10.95167,10.95167,0,0,1,9.18407-5.015h13.46m0-4h-13.46a14.89147,14.89147,0,0,0-11.14871,5.015H80.6416A14.89134,14.89134,0,0,0,69.49289.11465h-13.46a15.08647,15.08647,0,0,0-15,15.13787V35.79677a15.08648,15.08648,0,0,0,15,15.13788h13.46a14.86943,14.86943,0,0,0,12.02323-6.095h45.27357a14.86947,14.86947,0,0,0,12.0232,6.095h13.46a15.08648,15.08648,0,0,0,15-15.13788V15.25252a15.08647,15.08647,0,0,0-15-15.13787Z" transform="translate(-0.15287 -0.11465)"/><rect class="cls-2" x="161.12011" y="19.18018" width="44.87988" height="12.45947"/><path d="M204.15287,21.29465v8.46h-40.88v-8.46h40.88m4-4h-48.88v16.46h48.88v-16.46Z" transform="translate(-0.15287 -0.11465)"/><rect class="cls-2" x="2" y="19.18018" width="44.87988" height="12.45947"/><path d="M45.03287,21.29465v8.46h-40.88v-8.46h40.88m4-4H.15287v16.46h48.88v-16.46Z" transform="translate(-0.15287 -0.11465)"/><path class="cls-1" d="M152.27286,4.11464h-13.46a10.95165,10.95165,0,0,0-9.18408,5.015H78.677a10.95168,10.95168,0,0,0-9.18409-5.015h-13.46a11.06957,11.06957,0,0,0-11,11.13788V35.79677a11.06957,11.06957,0,0,0,11,11.13788h13.46a10.977,10.977,0,0,0,9.79895-6.095H129.014a10.977,10.977,0,0,0,9.799,6.095h13.46a11.06956,11.06956,0,0,0,11-11.13788V15.25252A11.06956,11.06956,0,0,0,152.27286,4.11464Z" transform="translate(-0.15287 -0.11465)"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="87.56" y1="-27.44" x2="212.44" y2="97.44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e1ccb4"/>
+      <stop offset="1" stop-color="#cc967a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0" y1="35" x2="50" y2="35" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ccc"/>
+      <stop offset=".51" stop-color="#cacaca"/>
+      <stop offset=".7" stop-color="#c3c3c3"/>
+      <stop offset=".83" stop-color="#b7b7b7"/>
+      <stop offset=".94" stop-color="#a6a6a6"/>
+      <stop offset="1" stop-color="#999"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="22.09" y1="132.32" x2="72.09" y2="132.32" gradientTransform="translate(322.09 167.32) rotate(-180)" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="gold" gradientTransform="rotate(45)">
+      <stop offset="0" stop-color="rgb(255, 229, 89)"/>
+      <stop offset="1" stop-color="rgb(255, 154, 0)"/>
+    </linearGradient>
+    <linearGradient id="silver" gradientTransform="rotate(45)">
+      <stop offset="0" stop-color="rgb(250, 250, 250)"/>
+      <stop offset="1" stop-color="rgb(180, 180, 180)"/>
+    </linearGradient>
+  
+  </defs>
+  <path class="cls-1" d="m232.73,0h-22.76c-5.5,0-9.96,4.46-9.96,9.96v.04h-100v-.04c0-5.5-4.46-9.96-9.96-9.96h-22.76c-9.54,0-17.27,7.73-17.27,17.27v35.45c0,9.54,7.73,17.27,17.27,17.27h22.76c5.5,0,9.96-4.46,9.96-9.96v-.04h100v.04c0,5.5,4.46,9.96,9.96,9.96h22.76c9.54,0,17.27-7.73,17.27-17.27V17.27c0-9.54-7.73-17.27-17.27-17.27Z"/>
+  <rect class="cls-3" y="28.75" width="50" height="12.5"/>
+  <rect class="cls-4" x="250" y="28.75" width="50" height="12.5"/>
+</svg>
